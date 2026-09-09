@@ -13,7 +13,7 @@ int main() {
     std::cout << "Using most recent " << bars.size() << " bars.\n\n";
 
     MarketClock clock(500);
-    Portfolio portfolio(10000.0); // start with $10,000 fake cash
+    Portfolio portfolio(10000.0); // start with $10000 fake cah
     SimpleDipBuyer strategy(portfolio);
     MarketFeed feed(bars, clock, strategy);
 

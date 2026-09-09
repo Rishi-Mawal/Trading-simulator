@@ -22,7 +22,7 @@ std::vector<Bar> loadData(const std::string& filepath) {
     }
     std::string line;
 
-    // skip header row
+    // should skip header row now
     std::getline(file, line);
 
     while (std::getline(file, line)) {
@@ -49,9 +49,8 @@ std::vector<Bar> loadData(const std::string& filepath) {
     }
 
     return bars;
-}   // <-- loadData ENDS here
+}   
 
-// getRecentBars is now its own separate function, starting fresh
 std::vector<Bar> getRecentBars(const std::vector<Bar>& allBars, int count) {
     if (allBars.size() <= count) {
         return allBars;
